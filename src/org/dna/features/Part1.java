@@ -79,7 +79,7 @@ public class Part1 {
 
     public void printAllGenes(String dna) {
         String gene = "";
-        int startIndex = 0, i = 0;
+        int startIndex = 0;
         while(true) {
             gene = findGene(dna, startIndex);
             if(gene.isEmpty()) {
@@ -87,8 +87,7 @@ public class Part1 {
             } else {
                 System.out.println("Gene : " + gene);
             }
-            startIndex += gene.length() + 1;
-            i++;
+            startIndex += gene.length();
         }
     }
 
